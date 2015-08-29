@@ -3,6 +3,7 @@
 namespace Interop\Container\Pimple\Exception;
 
 use Interop\Container\Exception\NotFoundException as NotFoundExceptionInterface;
+use Interop\Container\Pimple\Exception\PimpleInteropExceptionInterface;
 
 /**
  * NotFoundException
