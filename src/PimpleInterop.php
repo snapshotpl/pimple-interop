@@ -12,19 +12,12 @@ use Pimple\Container;
  *
  * @author Witold Wasiczko <witold@wasiczko.pl>
  */
-class PimpleInterop implements ContainerInterface
+class PimpleInterop extends Container implements ContainerInterface
 {
-    protected $container;
-
-    public function __construct(Container $contaner)
-    {
-        $this->container = $contaner;
-    }
-
     public function get($id)
     {
         try {
-            return $this->container->offsetGet($id);
+            return $this[$id];
         } catch (\InvalidArgumentException $exception) {
             throw new NotFoundException($exception->getMessage(), $exception->getCode(), $exception);
         } catch (\Exception $exception) {
@@ -34,7 +27,7 @@ class PimpleInterop implements ContainerInterface
 
     public function has($id)
     {
-        return $this->container->offsetExists($id);
+        return isset($this[$id]);
     }
 
 }
