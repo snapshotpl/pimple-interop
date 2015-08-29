@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Interop\\Container\\Pimple": "src/"
+            "Interop\\Container\\Pimple\\": "src/"
         }
     }
 }
