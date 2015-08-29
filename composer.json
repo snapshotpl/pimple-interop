@@ -1,4 +1,5 @@
 {
+    "name": "snapshotpl/pimple-interop",
     "require": {
         "container-interop/container-interop": "^1.1",
         "pimple/pimple": "@stable"
